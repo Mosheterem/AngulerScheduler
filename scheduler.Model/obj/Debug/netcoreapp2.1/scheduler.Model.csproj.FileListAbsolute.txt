@@ -25,3 +25,12 @@ D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.Model\obj\Debug\netcoreapp2.1
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.AssemblyInfo.cs
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.dll
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.pdb
+D:\URing\RepoAngulerSchduler\scheduler.Model\bin\Debug\netcoreapp2.1\scheduler.Model.deps.json
+D:\URing\RepoAngulerSchduler\scheduler.Model\bin\Debug\netcoreapp2.1\scheduler.Model.dll
+D:\URing\RepoAngulerSchduler\scheduler.Model\bin\Debug\netcoreapp2.1\scheduler.Model.pdb
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.csprojAssemblyReference.cache
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.csproj.CoreCompileInputs.cache
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.AssemblyInfoInputs.cache
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.AssemblyInfo.cs
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.dll
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.pdb
