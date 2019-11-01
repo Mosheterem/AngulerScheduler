@@ -1,0 +1,24 @@
+h2.header-title {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  top: 13px;
+  color: #fff;
+  max-width: 1190px;
+  width: 100%;
+}
+/*css added 31-7-19*/
+
+.web_menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.web_menu {
+  position: relative;
+}
+
+  .web_menu ul {
+    float: right;
+  }

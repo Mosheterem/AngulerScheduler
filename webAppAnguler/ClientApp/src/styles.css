@@ -1,0 +1,436 @@
+/* You can add global styles to this file, and also import other style files */
+label {
+  max-width: none !important;
+  font-weight: unset !important;
+}
+
+body {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+button {
+  font-family: 'Frank Ruhl Libre', serif;
+}
+
+h1 {
+  margin-top: 0 !important;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.p-0 {
+  padding: 0 0 !important;
+}
+
+ol, ul {
+  margin-bottom: 0px !important;
+}
+
+.bs-chevron-down, .bs-chevron-up {
+  padding: 5px 5px !important;
+}
+
+.modal-header h3 {
+  color: white;
+}
+
+.calendar_icon {
+  padding: 9px;
+}
+
+ul.pull-right {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none !important;
+  outline: none !important;
+}
+
+.radiolbl label {
+  font-size: 15px !important;
+}
+
+.page_btn {
+  margin-left: 10px !important;
+  color: #fff !important
+}
+
+.module_form_feild .dropdown-item.active, .module_form_feild .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #9fd5ed !important;
+}
+
+
+.module_form_feild .dropdown-menu {
+  width: 100%;
+  padding: 0;
+}
+
+
+.add_instr_image .uploaded_image img {
+  max-height: 120px;
+}
+
+.add_remove_icon span.add_icon {
+  width: 30px;
+  height: 30px;
+  font-size: 17px !important;
+  line-height: 32px;
+  margin: 0 5px;
+}
+
+.set_bottom {
+  bottom: -11px;
+  text-align: center
+}
+
+.sterilization_box_btn > a:not([href]):not([tabindex]) {
+  color: white !important;
+}
+
+.btn_full_col {
+  width: 100% !important;
+}
+
+.module_form_feild .dropdown-item {
+  font-size: 13px;
+}
+
+.checkbox_field input[type=checkbox]:not(old) + label, .form_field input[type=radio ]:not(old) + label {
+  display: inline-block;
+  margin-left: -31px;
+  line-height: 36px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.forget {
+  float: right;
+  font-size: 19px;
+  color: #6a7c84;
+  font-weight: 500;
+  line-height: 42px;
+}
+
+.page_btn :disabled {
+  cursor: not-allowed !important;
+}
+
+/*-----------------------------22-02-19------------------------*/
+.otp_form {
+  background: #f9f9f9;
+  border: 1px solid #dedede;
+}
+
+.otp_col_head {
+  background: #eeeeee;
+  padding: 13px 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.add_disposable_box {
+  padding: 13px 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.otp_col {
+  float: left;
+}
+
+.otp_form::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.first_col {
+  width: 50%;
+  border-right: 1px solid #ccc;
+}
+
+.sec_col {
+  width: 50%;
+  height: 205px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.otp_col .add_disposable_box {
+  margin: 0 15px;
+}
+
+.otp_col_table {
+  display: table;
+  width: 100%;
+}
+
+  .otp_col_table .otp_col_head {
+    display: table-cell;
+  }
+
+    .otp_col_table .otp_col_head:first-child {
+      width: 70%;
+    }
+
+.otp_col_table_col {
+  display: table-cell;
+  padding: 10px 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+  .otp_col_table_col:first-child {
+    width: 70%;
+  }
+
+.sec_col:after {
+  content: "";
+  width: 1px;
+  background: #ccc;
+  left: 65%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.otp_col_table_col p {
+  margin: 0;
+}
+
+#add-disposable .otp_form:before {
+  left: 85%;
+}
+
+#add-disposable .add_disposable_box, #add-disposable .otp_col_table_col p {
+  font-size: 13px;
+}
+
+#add-disposable .otp_col_head {
+  position: relative;
+  padding: 9px 20px;
+  line-height: 34px;
+}
+
+  #add-disposable .otp_col_head input[type="text"] {
+    float: right;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 3px 10px;
+    width: 180px;
+    line-height: 24px;
+  }
+
+  #add-disposable .otp_col_head button {
+    position: absolute;
+    right: 30px;
+    background: #fff;
+    top: 17px;
+    line-height: 24px;
+  }
+
+  #add-disposable .otp_col_head:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+.add_instr_image {
+  right: 10px !important;
+}
+
+@media (max-width:991px) {
+  .otp_col .add_disposable_box {
+    margin: 0;
+  }
+
+  .add_disposable_box {
+    padding: 13px 15px;
+    font-size: 14px;
+  }
+
+  .otp_col_head {
+    padding: 13px 15px;
+    font-size: 16px;
+  }
+
+  .otp_col_table_col {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:767px) {
+  .first_col {
+    width: 100%;
+    border-right: none;
+  }
+
+  .otp_col .add_disposable_check .checkbox_field {
+    width: 65%;
+  }
+
+  .otp_col .add_disposable_check .checkbox_field_col {
+    clear: none;
+  }
+
+  .last_col {
+    width: 35%;
+  }
+
+  .sec_col {
+    width: 100%;
+    height: 130px;
+  }
+
+    .sec_col .add_disposable_box, .last_col .add_disposable_box {
+      height: auto;
+    }
+
+  .otp_col .add_disposable_box {
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .otp_col_table_col:first-child {
+    width: 68%;
+  }
+
+  .otp_col_table_col {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .sec_col::after {
+    left: 68%;
+  }
+
+  .otp_col_head {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .otp_col_table .otp_col_head:first-child {
+    width: 68%;
+  }
+}
+
+.checkbox_field input[type=checkbox]:not(old) + label > span, .form_field input[type=radio]:not(old) + label > span {
+  margin: 0.25em 0.5em 0.25em 0.45em !important;
+}
+/* .text-danger {
+  position: absolute;
+  bottom: -15px;
+  margin: 0 !important;
+  font-size: 12px !important;
+  padding: 0 !important;
+  line-height: 16px !important;
+  left: 0;
+}*/
+label.text-danger:last-child {
+  text-align: right;
+  right: 0;
+}
+
+
+
+/*     Scrolled Table        */
+
+.scrolled_body tr {
+  display: table;
+  width: 100%;
+}
+
+.scrolled_body tbody {
+  margin-right: -12px;
+  display: block;
+  overflow-y: scroll;
+  max-height: 180px;
+}
+
+.scrolled_body tbody {
+  margin-right: -12px;
+  display: block;
+  overflow-y: scroll;
+  max-height: 180px;
+}
+
+  .scrolled_body tbody td {
+    border: 1px solid #dedede;
+    padding: 10px 15px;
+    vertical-align: middle;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+.scrolled_body {
+  overflow: hidden;
+}
+
+  .scrolled_body tbody td:last-child {
+    width: 138px;
+  }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .scrolled_body tbody {
+    margin-right: 0px;
+  }
+
+    .scrolled_body tbody td:last-child {
+      width: 141px;
+    }
+}
+
+@-moz-document url-prefix() {
+  .scrolled_body tbody {
+    margin-right: -12px !important;
+  }
+
+    .scrolled_body tbody td:last-child {
+      width: 138px !important;
+    }
+}
+
+@media (max-width:1199px) {
+  .scrolled_body tbody {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width:991px) {
+  .scrolled_body tbody td:first-child, .scrolled_body thead td:first-child {
+    width: 147px;
+    padding: 10px 10px;
+  }
+
+  .scrolled_body tbody td {
+    padding: 10px 10px;
+  }
+
+  .scrolled_body .table td {
+    white-space: normal;
+    word-break: break-all;
+    font-size: 13px;
+  }
+}
+
+.module_form_feild label input {
+  margin-right: 5px;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+.scan_box_btn a:hover, .scan_box_btn a:focus {
+  color: #fff !important;
+}
+

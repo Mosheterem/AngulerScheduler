@@ -1,0 +1,105 @@
+/*.modal-footer .custom-control {
+  padding: 0 15px 0 35px;
+}
+
+  .modal-footer .custom-control .custom-control-label::before {
+    left: -20px;
+    right: inherit;
+  }
+
+  .modal-footer .custom-control .custom-control-label::after {
+    left: -20px;
+    right: inherit;
+  }
+.btn3d {
+  transition: all .08s linear;
+  position: relative;
+  outline: medium none;
+  -moz-outline-style: none;
+  border: 0px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+  .btn3d:focus {
+    outline: medium none;
+    -moz-outline-style: none;
+  }
+
+  .btn3d:active {
+    top: 9px;
+  }
+.btn-default {
+  box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #adadad, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #fff;
+}
+
+.btn-primary {
+  box-shadow: 0 0 0 1px #428bca inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #357ebd, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #428bca;
+}
+
+.btn-success {
+  box-shadow: 0 0 0 1px #5cb85c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4cae4c, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #5cb85c;
+}
+
+.btn-info {
+  box-shadow: 0 0 0 1px #5bc0de inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #46b8da, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #5bc0de;
+}
+
+.btn-warning {
+  box-shadow: 0 0 0 1px #f0ad4e inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #eea236, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #f0ad4e;
+}
+
+.btn-danger {
+  box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #C24032, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+  background-color: #c63702;
+}
+.bottom-btns {
+  float: right;
+  width: 50%;
+  text-align: right;
+  position: relative;
+  top: -20px;
+}
+
+.input-block {
+  width: 100%;
+  float: left;
+  text-align: right;
+}
+  .input-block  .btn3d{
+    margin-left:10px;
+    margin-top:0px;
+  }
+.bottom-btns .btn3d {
+  margin-top:0px;
+}
+.input-block .text-field {
+  width: 300px;
+}
+.text-field {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size:large;
+}
+.input-text-field {
+  display: inline-block;
+  margin-top: 0px;
+  vertical-align: top;
+}
+.input-block  .btn3d {
+  margin-top: 5px;
+}
+.input-block  .form-group {
+  margin-bottom: 0;
+}
+#step2 .modal-footer {
+  padding-bottom: 0;
+}*/

@@ -1,0 +1,703 @@
+
+@media (max-width:1600px) {
+.checkbox_field input[type="checkbox"]:not(old) + label,
+.form_field input[type="radio"]:not(old) + label { font-size: 16px; line-height: 30px; }
+.forget { font-size: 16px; line-height: 30px; }
+.login_left { padding: 40px 30px; }
+.category_list li p { font-size: 13px; line-height: 18px; }
+.login_section { padding: 25px 30px; }
+.login_section .form_box { margin-top: 15px; }
+.login_link { margin-top: 15px; }
+.category_list { margin: 0 -10px 10px; }
+.category_list li { padding: 10px; }
+.login_left h1 { font-size: 50px; line-height: 50px; margin-bottom: 20px; }
+.l_icon { width: 75px; height: 75px; padding: 10px; }
+.category_list li a { height: 160px; }
+}
+
+@media (max-width:1300px) {
+.form_box input { height: 30px; font-size: 18px; }
+.form_box label { font-size: 16px; }
+.checkbox_field input[type="checkbox"]:not(old) + label,
+.form_field input[type="radio"]:not(old) + label { font-size: 14px; line-height: 26px; font-weight: 400; }
+.forget { font-size: 14px; line-height: 26px; font-weight: 400; }
+.blue_btn { font-size: 20px; padding: 10px 15px; }
+.login_left h1 { font-size: 40px; line-height: 40px; margin-bottom: 15px; }
+.category_list li p { font-size: 11px; line-height: 16px; }
+.category_list { margin: 0 -10px 20px; }
+}
+
+@media (max-width:1199px) {
+.logo { width: 150px; }
+.menu li a { font-size: 14px; }
+.menu,
+.social_icon { margin: 26px 0; }
+.section { padding: 40px 0; }
+.front_heading { font-size: 28px; }
+.category_list li { padding: 10px; width: 24.5%; }
+.header { padding: 0px 10px; height: 115px; }
+.content { padding: 115px 10px 0px; min-height: calc(100vh - 50px); }
+footer { padding: 10px; }
+.web_logo { background: #f9f9f9; float: left; width: 150px; padding: 15px 25px; }
+.web_menu ul li a { font-size: 16px; }
+.web_menu { margin-left: 180px; padding: 35px 0; }
+.barcode_box { width: 60%; }
+.help { right: 20px; font-size: 16px; top: 10px; }
+.con_box h3 { font-size: 20px; }
+.sterilization_col label { font-size: 15px; }
+.module_form_feild { margin-left: 170px; }
+.sterilization_box_in tbody { font-size: 14px; }
+.sterilization_box_in thead { font-size: 15px; }
+.con_box .page_nav li a { font-size: 17px; padding: 8px 15px; }
+.page_form_btn { margin-left: 0 !important; }
+.module_form_feild_col span.sub_label { font-size: 14px; left: -5px; }
+.module_form_feild_col { width: 50%; margin-left: 0%; }
+.module_form_feild_col:last-child span.sub_label { left: 10px; }
+.module_form_feild input[type="text"] { font-size: 14px; color: #8d9a9f; padding: 6px 11px; }
+.dashboard_content {
+    margin: 200px 0;
+    font-size: 36px;
+    line-height: 40px;
+}
+.sterilization_col span {
+    font-size: 15px;
+    padding: 11px 8px;
+}
+.scan_box .sterilization_col label {
+    font-size: 20px;
+}
+.ster_col:nth-child(2n+1) {
+    width: 20%;
+}
+.ster_col:nth-child(2n) {
+    width: 30%;
+}
+.edit_damaged label {
+    display: inline-block;
+    padding: 7px 0;
+	font-size:14px;
+}
+.edit_damaged span {
+    color: #666;
+    padding: 8px 8px;
+	font-size:14px;
+}
+.center_btn {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+}
+.uploaded_image {
+    margin-right: 0;
+    width: 25%;
+	padding-right:15px;
+	margin-bottom:15px;
+}
+.uploaded_image > .del_image {
+    right: 5px;
+}
+
+}
+
+@media (max-width:991px) {
+.logo { width: 120px; }
+.menu,
+.social_icon { margin: 17px 0; }
+.social_icon li { margin-right: 15px; }
+.front_heading { font-size: 24px; }
+.section { padding: 20px 0; }
+.video_button { width: 100px }
+.category_list li { padding: 10px; width: 32.7%; }
+.con_box h3 { font-size: 20px; }
+.user_name { font-size: 20px; margin: 0 0 20px; }
+.sterilization_col label { font-size: 14px; margin: 0; padding: 5px 5px; }
+.sterilization_col span { font-size: 14px; padding: 5px; }
+.sterilization_box_in { background: #f9f9f9; padding: 15px 20px; border-radius: 6px; margin-bottom: 30px; }
+.sterilization_col span.lot_number { padding: 3px 13px; font-size: 14px; }
+.sterilization_box_in h5 { font-size: 16px; }
+.sterilization_box_in .table thead td { padding: 10px 10px; }
+.sterilization_box_in thead { font-size: 15px; }
+.sterilization_box_in .table td,
+.sterilization_box_in .table th { padding: 6px 10px; }
+.sterilization_box_in tbody { font-size: 14px; }
+.nice-number button { font-size: 20px; padding: 0 5px; }
+.nice-number input { width: 35px !important; font-size: 14px; padding: 2px 3px; }
+.sterilization_box_btn a { font-size: 14px; padding: 6px 20px 8px 20px; margin: 0 6%; }
+.sterilization_box_btn { margin-bottom: 10px; }
+.scan_box h4 { font-size: 20px; margin: 0 0 20px; }
+.con_box .page_nav li a {
+    font-size: 14px;
+    padding: 0px 8px;
+}
+.con_box ul.page_nav {
+    margin: 0 -15px;
+}
+.module_form_feild { margin-left: 155px; }
+.module_form_feild input[type="text"] { font-size: 14px; padding: 5px 13px; height: 38px; }
+.module_form_feild textarea { font-size: 14px; padding: 5px 13px; height: 100px; }
+.module_form_feild select { font-size: 14px; padding: 3px 9px; height: 38px; }
+.calendar_icon { top: 0px; font-size: 16px !important; }
+.select_icon { top: 2px; }
+.page_form_btn a { margin-left: 10px; }
+.btn_light { font-size: 13px; padding: 3px 15px; }
+.barcode_box { width: 55%; margin-bottom: 35px; }
+.page_btn { font-size: 14px; padding: 5px 20px 7px 20px; border-top: 2px solid #00608c; }
+.login_detail { padding: 15px 20px 0; margin-top: 25px; margin-left: -20px; margin-right: -20px; }
+.login_detail h3 { text-align: left; margin: 0 15px 25px; }
+.module_form_feild_col { width: 100%; margin-bottom: 10px; }
+.maintenance_form .module_form_feild { margin-left: 190px; }
+.web_menu ul li a { font-size: 14px; padding: 9px 5px; }
+.web_menu ul li { margin-left: 15px; }
+.web_menu ul li::after { width: 2px; height: 15px; left: -10px; }
+.sterilization_box_in .table td a { font-size: 14px; }
+#add-disposable .modal-dialog {
+    max-width: 90%;
+    margin: 200px auto 50px;
+}
+.modal-title {
+    font-size: 20px;
+}
+.modal-body {
+    padding: 20px;
+    overflow: hidden;
+}
+.modal-body .table-responsive thead td {
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.modal-body .table-responsive tbody td {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.add_disposable_check .checkbox_field input[type="checkbox"]:not(old) + label {
+    font-size: 14px;
+    line-height: 34px;
+    margin-left: 0;
+    white-space: nowrap;
+}
+.add_disposable_check .checkbox_field input[type="checkbox"]:not(old):checked + label > span::before {
+    font-size: 16px;
+    line-height: 24px;
+}
+.success_modal .modal-dialog {
+    max-width: 350px;
+	margin-top:150px;
+}
+.success_icon {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 25px;
+    font-size: 50px;
+    line-height: 100px;
+}
+.success_box p {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 20px;
+}
+.dashboard_content {
+    margin: 200px 0;
+    font-size: 30px;
+    line-height: 40px;
+}
+.step_box {
+    width: 120px;
+    font-size: 16px;
+	padding:15px;
+}
+.step_con_col:last-child {
+    width: 75px;
+    padding: 15px;
+}
+.step_con_col {
+    padding: 15px 20px;
+}
+.step_con_col span {
+    font-size: 14px;
+}
+.step_con_feild {
+    margin: 0;
+}
+.step_con_feild select {
+    font-size: 14px;
+    padding: 5px 10px;
+    height: 42px;
+}
+.add_icon {
+    width: 35px;
+    height: 35px;
+    font-size: 18px !important;
+    line-height: 38px;
+}
+.scan_box .sterilization_col label {
+    font-size: 18px;
+}
+.ppm_date_col_in span {
+    font-size: 14px;
+}
+.ppm_upload a {
+    font-size: 14px;
+    padding: 6px 18px;
+}
+.ppm_date_col_in:last-child {
+    padding: 0 5px;
+}
+.ppm_date_col_in span {
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+.wrong_verified, .items_verified {
+    font-size: 14px;
+    line-height: 20px;
+	margin: 8px 0;
+}
+.ster_col input[type="text"] {
+    padding: 6px 11px;
+    font-size: 14px;
+}
+.ster_col:nth-child(2n+1) {
+    width: 18%;
+}
+.ster_col:nth-child(2n) {
+    width: 32%;
+}
+.items_verified .fa, .wrong_verified .fa {
+    font-size: 16px;
+    margin-right: 0px;
+}
+.damaged_search {
+    padding-right: 135px;
+}
+.page_form label {
+    font-size: 15px;
+}
+.center_btn {
+    padding-top: 30px;
+    margin-top: 0;
+}
+.uploaded_image {
+    width: 23%;
+}
+.add_instr {
+    padding-right: 200px;
+}
+.add_instr_image {
+    width: 190px;
+}
+.add_instr_image .uploaded_image {
+    padding: 13px 50px;
+    margin: 0 0 15px;
+}
+.add_instr_image .page_btn {
+    display: block;
+    font-size: 14px;
+    padding: 6px 25px 8px 25px;
+}
+.instruments_search_feild {
+    width: 50%;
+}
+.instruments_select_feild {
+    width: 45%;
+    padding-left: 75px;
+}
+.instruments_search {
+    padding: 0 110px 0 15px;
+}
+.instruments_select_feild select, .instruments_search_feild input[type="text"] {
+    font-size: 14px;
+}
+.instruments_search .btn_light {
+    font-size: 14px;
+    padding: 8px 15px;
+}
+.instruments_select_feild {
+    width: 47%;
+    padding-left: 65px;
+}
+}
+
+@media (max-width:767px) {
+.menu li { margin-right: 10px; }
+.social_icon li { margin-right: 10px; }
+.menu li a { font-size: 12px; }
+.menu,
+.social_icon { margin: 13px 0; }
+.logo { width: 100px; margin: 0 auto; }
+.copy_right { text-align: center }
+.footer_link { text-align: center; }
+.video_button { width: 80px }
+.contact_detail { text-align: center; }
+.login_section { padding: 25px 30px; margin-top: 30px; clear: both; }
+.copy { text-align: center; }
+.sterilization_box_btn a { font-size: 14px; margin: 0 4%; }
+.sterilization_box_in .table-responsive { margin: 10px 0; }
+.scan_box_btn { text-align: center; }
+.login_left { height: auto; }
+.operator_form .sterilization_col { padding: 0 10px; width: 100%; float: left; }
+.barcode_box { width: 70%; margin-bottom: 20px; }
+.sterilization_box_in thead { font-size: 14px; line-height: 18px; }
+.sterilization_box_in tbody { font-size: 13px; }
+.page_form label { font-size: 14px; }
+.page_form { padding: 10px 0 20px; width: 100%; }
+.page_form button { bottom: 30px; }
+.sterilization_box .pagination a { font-size: 14px; padding: 7px 13px; }
+.web_menu ul li a { font-size: 14px; padding: 9px 0px; }
+.scan_box h4 { font-size: 16px; margin: 0 0 15px; }
+.user_name { font-size: 18px; margin: 0 0 10px; }
+.sterilization_box_in .table td a { font-size: 13px; }
+.add_disposable_check .checkbox_field {
+    text-align: left;
+    width: 100%;
+    float: left;
+}
+
+.add_disposable_check .checkbox_field_col span {
+    line-height: 20px;
+}
+.add_disposable_check .checkbox_field_col {
+    margin-left: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+    clear: both;
+}
+#add-disposable .modal-dialog {
+    max-width: 90%;
+    margin: 50px auto 30px;
+}
+.dashboard_content {
+    margin: 100px 0;
+    font-size: 24px;
+    line-height: 30px;
+}
+.ppm_date_col {
+    float: left;
+    width: 100%;
+    padding: 5px 25px;
+}
+.ppm_upload {
+    margin-bottom: 20px;
+}
+.ster_col:nth-child(2n+1) {
+    width: 110px;
+}
+.ster_col:nth-child(2n) {
+    width: 70%;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.damaged_search {
+    padding-right: 0;
+}
+.damaged_search .page_form {
+    width: 100%;
+    padding-bottom: 0px;
+}
+.damaged_search .page_form button {
+    bottom: 10px;
+}
+.damaged_btn {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+}
+.damaged_btn .page_form_btn {
+    text-align: center;
+}
+.text-right {
+    text-align: center !important;
+}
+.ppm_upload .page_btn {
+    font-size: 13px;
+    padding: 6px 18px 8px 18px;
+}
+.add_instr {
+    padding-right: 0;
+}
+.add_instr_image {
+    position: relative;
+    width: auto;
+    clear: both;
+    margin-left: 165px;
+    margin-right: 10px;
+}
+.instruments_search {
+    padding: 0 15px 0 15px;
+}
+.instruments_search_feild {
+    width: 100%;
+}
+.instruments_select_feild {
+    width: auto;
+    padding-left: 65px;
+    float: none;
+    clear: both;
+    margin-right: 110px;
+}
+.instruments_search_feild {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.instruments_search .btn_light {
+    font-size: 14px;
+    padding: 8px 22px;
+    bottom: 0;
+}
+}
+
+@media (max-width:640px) {
+.menu li a { min-width: inherit; }
+.partner_logo li { margin-bottom: 20px }
+.partner_logo li:last-child { margin-bottom: 0 }
+.video_button { width: 60px }
+.video_slider .owl-controls .owl-nav [class*="owl-"] { height: 35px; width: 20px; }
+}
+
+@media (max-width:639px) {
+.web_menu ul li a { font-size: 13px; }
+.web_menu ul li { margin-left: 6px; }
+.web_menu ul li::after { height: 14px; left: -6px; top: 13px; width: 1px; }
+.web_menu ul li a .fa { font-size: 16px; }
+.noti_f { font-size: 10px; padding: 0 5px; line-height: 16px; right: -7px; top: -5px; }
+.web_logo { background: #f9f9f9; float: left; width: 95px; padding: 10px 15px; }
+.web_menu { margin-left: 100px; padding: 15px 0; }
+.header { padding: 0; height: 70px; }
+.con_box .page_nav li a { font-size: 14px; padding: 0px 7px; }
+.modal-body .table-responsive thead td {
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.modal-body .table-responsive tbody td {
+    padding: 7px 10px;
+    font-size: 14px;
+}
+.success_modal .modal-dialog {
+    max-width: 250px;
+    margin: 100px auto 30px;
+}
+.success_icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto 20px;
+    font-size: 40px;
+    line-height: 80px;
+}
+.success_box p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 10px;
+}
+.dashboard_content {
+    margin: 70px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+.dashboard_content {
+    margin: 50px 0;
+    font-size: 16px;
+    line-height: 22px;
+}
+.step_box {
+    width: 80px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.step_con_col {
+    padding: 10px 15px;
+}
+.add_icon {
+    width: 30px;
+    height: 30px;
+    font-size: 16px !important;
+    line-height: 32px;
+}
+.step_con_col:last-child {
+    width: 50px;
+    padding: 10px 10px;
+}
+.step_con_col p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+}
+.uploaded_image {
+    width: 50%;
+}
+.ppm_upload {
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-top: 50px;
+}
+.module_form_feild .checkbox_field {
+    margin: 0;
+}
+.add_instr_image {
+    margin-left: 155px;
+}
+.ppm_upload {
+    padding-top: 0;
+}
+}
+
+@media (max-width:575px) {
+.video_button { width: 40px }
+.content { padding: 90px 0px 0px; min-height: calc(100vh - 30px); }
+.page_con { padding-top: 45px; }
+.con_box { background: #f0f0f0; margin-bottom: 20px; padding: 10px 20px; position: relative; }
+.con_box h3 { font-size: 16px; }
+.user_image { width: 100px; height: 100px; }
+.help { right: 20px; font-size: 14px; top: 6px; }
+.help i { font-size: 20px; }
+.user_name { font-size: 16px; margin: 0 0 15px; }
+.sterilization_box_btn a { font-size: 13px; margin: 5px; padding: 6px 15px 8px 15px; }
+.sterilization_box_btn a:first-child,
+.sterilization_box_btn a:last-child { margin: 5px; float: none; }
+footer { padding: 0; }
+.footer_link ul li { position: relative; margin: 0; }
+.footer_link ul li a { padding: 0px 10px; }
+.scan_box h4 { font-size: 16px; margin: 0 0 20px; }
+.barcode_box { width: 60%; margin-bottom: 20px; }
+.sterilization_col label { font-size: 13px; }
+.module_form_feild { margin-left: 145px; }
+.page_form_btn { padding: 0; }
+.page_btn { font-size: 13px; padding: 5px 15px 7px 15px; border-top: 2px solid #00608c; }
+.page_form_btn { text-align: center; }
+.user_image img { width: 100px; height: 100px; }
+.module_form_feild { margin-left: 145px !important; }
+.scan_box .module_form_feild {
+    margin-left: 0 !important;
+    padding: 6px 5px;
+}
+.ppm_date {
+    padding: 0 8px;
+    margin: 0;
+}
+.ppm_date_col {
+    float: left;
+    width: 100%;
+    padding: 0 0 5px;
+}
+.sterilization_box_in .text-right {
+    padding-top: 20px;
+}
+}
+
+@media (max-width:480px) {
+.contact_detail p { border: none; display: block; padding: 2px 0; font-size: 11px; }
+.contact_detail p a { font-size: 11px; }
+.menu,
+.social_icon { float: none; text-align: center; display: block; width: 100%; overflow: hidden }
+.menu li { float: none; display: inline-block; margin: 0 0 10px 0 }
+.social_icon li { float: none; display: inline-block; }
+.menu { margin-bottom: 0; margin-top: 10px }
+.social_icon { margin: 0 }
+.logo { text-align: center; float: none; margin: 0 auto }
+}
+
+@media (max-width:479px) {
+.category_list li { padding: 10px; width: 49.3%; }
+.login_section { padding: 25px 15px; margin-top: 20px; }
+.px-4 { padding-right: 1rem !important; padding-left: 1rem !important; }
+.form_switch p { font-size: 12px; margin: 10px 0 0; line-height: 20px; }
+.web_menu ul li a { font-size: 13px; }
+.web_logo { background: #f9f9f9; float: left; width: 90px; padding: 10px 10px; }
+.con_box .page_nav li a { font-size: 13px; padding: 0px 7px; }
+.module_form_feild { margin-left: 0 !important; clear: both; }
+.module_form_label { float: left; margin-bottom: 0; }
+.module_form_feild_col { width: 90%; margin-bottom: 10px; margin-left: 10%; }
+.module_form_feild { margin-bottom: 10px; }
+.sterilization_col label { padding: 0; }
+.calendar_icon { top: 2px; }
+.web_menu ul li:first-child { position: absolute; top: 0; right: 15px; }
+.web_menu { margin-left: 90px; padding-top: 32px; padding-right: 10px; }
+.web_menu ul li::after { height: 14px; right: -6px; top: 13px; width: 1px; left: auto; }
+.web_menu ul li:last-child:after { display: none; }
+.sterilization_col span {
+    font-size: 14px;
+    padding: 5px 0;
+}
+.sterilization_box .pagination a {
+    padding: 7px 11px;
+}
+.step_box {
+    width: 70px;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.step_con_col {
+    padding: 10px 10px;
+}
+.add_icon {
+    width: 25px;
+    height: 25px;
+    font-size: 14px !important;
+    line-height: 26px !important;
+}
+.step_con_col:last-child {
+    width: 45px;
+    padding: 10px 10px;
+}
+.step_con_col > span {
+    font-size: 14px;
+    line-height: 18px;
+}
+.step_con_feild select {
+    font-size: 14px;
+    padding: 5px 25px 5px 10px;
+    height: 42px;
+}
+.step_con_feild span.select_icon {
+    top: 9px;
+    right: 8px;
+    font-weight: 700;
+    font-size: 22px !important;
+}
+.scan_box .module_form_feild {
+    margin-left: 0 !important;
+    padding: 6px 0px;
+}
+.ppm_date {
+    padding: 0;
+    margin: 0;
+}
+.ppm_upload a {
+    font-size: 13px;
+    padding: 6px 15px;
+}
+.scan_box_btn a {
+    font-size: 14px;
+    padding: 5px 20px;
+    margin: 5px;
+}
+.sterilization_box_btn a {
+    padding: 4px 15px 6px 15px;
+}
+.edit_damaged .sterilization_col .calendar_icon {
+    padding: 5px;
+}
+.edit_damaged_modal .sterilization_col .calendar_icon {
+    padding: 5px 10px;
+}
+.modal-title {
+    font-size: 16px;
+}
+.instruments_select_feild {
+    margin-right: 0; margin-bottom:20px;
+}
+.instruments_search .btn_light {
+    font-size: 14px;
+    padding: 8px 22px;
+    bottom: 0;
+    position: relative;
+    display: block;
+    margin: 0 auto auto;
+    right: 0;
+}
+.add_instr_image {
+    margin-left: 10px;
+}
+}

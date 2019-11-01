@@ -1,0 +1,346 @@
+<!--<style>
+
+  .inputpading input {
+  padding-right: 9px;
+  color: red;
+  padding-left: 10px !important;
+}
+</style>-->
+<div class="row header-top">
+
+  <div class="col-7">
+
+    <a> כניסה אחרונה  {{currentUser.LastUserLogin | date: 'dd/MM/yyyy HH:MM'}}</a>
+
+  </div>
+  <div class="col-5 pull-left middle-content">
+
+    <button type="button" class="btn btn-info  pull-left" data-toggle="modal" data-target="#myModal"><i class="fa fa-users"></i>משתמשים</button>
+
+    <button type="button" class="btn btn-info m-l10 pull-left" data-toggle="modal" (click)="getDataSource()" data-target="#myModal2"><i class="glyphicon glyphicon-file"></i>הדפס</button>
+
+    <dx-check-box [value]="UserSettings.startViewAsMerged" [(ngModel)]="UserSettings.startViewAsMerged" text="הצג יומן מאוחד"></dx-check-box>
+  </div>
+
+  <div class="group-date">
+    <h4 class="dateinfo">  תאריך קובע </h4>
+
+
+    <dx-date-box class="fill-here" [(value)]="currentDate" type="date">
+
+    </dx-date-box>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog setting-block">
+
+      <!-- Modal content-->
+      <div class="modal-content clearfix">
+        <div class="modal-header">
+          <button type="button"  class="close pull-left" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">רשימת המשתמשים המופיעים ביומן</h4>
+
+        </div>
+        <div class="modal-body">
+          <h3 class="register-heading text-center"> {{ currentUser.UserName}}: ההגדרות האישיות ששמורות עבורך  </h3>
+          <div class="row">
+
+            <div class="col-6 pull-right rightCols">
+              <div class=" panel panel-default">
+
+              
+                <ul class="list-inline">
+
+                  <li class="list-inline-item" *ngFor="let opt of ownersFix">
+                    {{opt.id}} - {{opt.text}}
+
+                    <label class="label-inner">
+                      <input [id]="opt.id" (change)="onChange(opt, $event)" 
+                             name="tagOptions{{opt.id}}" [value]="opt.isCheked" [(ngModel)]="opt.isCheked" type="checkbox" [checked]="opt.isCheked" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="col-6 ">
+              <div class="tab-content user-setting-block">
+                <div class="tab-pane  show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                  <div class="register-form">
+
+                    <div class="form-group">
+
+
+                      <label class="checkbox-inline"><input [disabled]="!crudAllow" [(ngModel)]="UserSettings.isCrud" data-md-icheck (change)="toggleVisibility($event)" type="checkbox" [value]="UserSettings.isCrud"> מורשה לעריכת רשומות </label>
+                    </div>
+                    <div class="form-group">
+
+
+                      <label class="checkbox-inline"> <input type="checkbox" [(ngModel)]="UserSettings.isShowDeletedRecords" data-md-icheck (change)="toggleVisibility($event)" />    להציג רשומות מחוקות</label>
+                    </div>
+                    <div class="form-group">
+
+                      <label class="checkbox-inline"><input [(ngModel)]="UserSettings.startViewAsMerged" data-md-icheck (change)="toggleVisibility($event)" [value]="UserSettings.startViewAsMerged" type="checkbox">    מבט התחלתי מאוחד </label>
+
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+
+                        <label class="col-7 line-label colsRow">(ריווח מבט יומי (בדקות</label>
+                        <div class="col-5 colsRow">
+                          <dx-number-box [(ngModel)]="UserSettings.cellDuration"
+                                         [value]="UserSettings.cellDuration"
+                                         [min]="5"
+                                         [max]="120"
+                                         (onValueChanged)="onSaveSettings"
+                                         [showSpinButtons]="false"></dx-number-box>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-7 line-label colsRow">מבט יומי החל משעה</label>
+                        <div class="col-5 colsRow">
+                          <dx-number-box [(ngModel)]="UserSettings.startHour"
+                                         [value]="UserSettings.startHour"
+                                         [min]="6"
+                                         [max]="24"
+                                         (onValueChanged)="onSaveSettings"
+                                         [showSpinButtons]="false"></dx-number-box>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="row">
+                        <label class="col-7 line-label colsRow">מבט יומי עד שעה</label>
+                        <div class="col-5 colsRow">
+                          <dx-number-box [(ngModel)]="UserSettings.endHour"
+                                         [value]="UserSettings.endHour"
+                                         [min]="6"
+                                         [max]="24"
+                                         [showSpinButtons]="false"
+                                         (onValueChanged)="onSaveSettings"></dx-number-box>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+
+
+
+
+                    <!-- <a href="#"  class="btn"><i class="icon-align-justify"></i> <strong>save</strong></a> -->
+                    <!-- <input type="submit"  class="btnRegister"  value="Update"/> -->
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer pull-left">
+          <button type="button" class="btn btn-success m-l10" (click)="onSaveSettings()" data-dismiss="modal">שמור</button>
+          <!-- <a class="btn icon-btn btn-success"  (click)="onSaveSettings(UserSettings.userId)" href="#" ><span class="glyphicon btn-glyphicon glyphicon-save img-circle text-success"></span>שמור</a> -->
+          <button type="button" class="btn btn-default" data-dismiss="modal">סגור</button>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+
+      xx
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">הגדרות עבודה אישיות למשתמש</h4>
+          <button type="button"  (click)="resetDefault()"  class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" *ngIf="stepNumberDefault==1">
+
+          <app-appointment-report [currentUser]="currentUser.UserName" [stepNumberDefault]="stepNumberDefault"  [Appointments]="DataSource._items" [Resources]="ownersFix"></app-appointment-report>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">סגור</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--<app-add-appointment></app-add-appointment>-->
+<!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalpopup">Open Modal</button>-->
+<ng-container *ngIf="resources  && UserSettings && UserSettings.startHour && !UserSettings.startViewAsMerged">
+  <dx-scheduler [dataSource]="appointmentsData"
+                [remoteFiltering]="true"
+                allDayExpr="allDayEvent"
+                [views]='["day", "week", "month","agenda"]'
+                currentView="month"
+                [currentDate]=currentDate
+                [startDayHour]=UserSettings.startHour
+                [endDayHour]=UserSettings.endHour
+                [height]="800"
+                textExpr="teur"
+                appointmentTemplate="appointment-template"
+                [cellDuration]=UserSettings.cellDuration
+                [resources]="resources"
+                startDateExpr="startTime"
+                endDateExpr="endTime"
+                [rtlEnabled]="true"
+                [firstDayOfWeek]="0"
+                [showAllDayPanel]="true"
+                (onAppointmentClick)="onAppointmentClick($event)" [groups]="['ownerIds']" (onAppointmentFormOpening)="onAppointmentFormCreated($event)">
+
+    <dxo-editing #editingOptions
+                 [allowAdding]="true"
+                 [allowUpdating]="true"
+                 [allowDeleting]=UserSettings.isCrud
+                 [allowResizing]="false"
+                 [allowDragging]="true"></dxo-editing>
+    <dxi-resource fieldExpr="ownerIds"
+                  label="text"
+                  [allowMultiple]="true"
+                  [dataSource]="owners">
+    </dxi-resource>
+    <dxi-resource fieldExpr="label"
+                  [allowMultiple]="false"
+                  label="text"
+                  colorExpr="color"
+                  useColorAsDefault="false"
+                  [dataSource]="LabelsData">
+    </dxi-resource>
+
+    <div class="devendra" *dxTemplate="let showtime of 'appointment-template'">
+      <div style="border-color:red;" class='showtime-preview'>
+        <div [style.color]="getTextColor(showtime.hexForeColor,showtime.hexBackColor)" [ngStyle]="{'background-color':getbackColor(showtime.hexBackColor,showtime.hexForeColor)}" [ngClass]="showtime.isDeleted ?'strikethrough': 'null' "><span class="bardiv" [ngStyle]="{'background-color':getbarColor(showtime.hexBarColor)}"></span>{{showtime.teur}}</div>
+
+        <div [style.color]="getTextColor(showtime.hexForeColor,showtime.hexBackColor)" [ngStyle]="{'background-color':getbackColor(showtime.hexBackColor,showtime.hexForeColor)}" class='dropdown-appointment-dates'>
+          {{(showtime.startTime | date:'shortTime') + ' - ' + (showtime.endTime | date:'shortTime')}}
+        </div>
+      </div>
+    </div>
+  </dx-scheduler>
+
+</ng-container>
+<ng-container *ngIf="resources  && UserSettings && UserSettings.startHour && UserSettings.startViewAsMerged">
+  <dx-scheduler [dataSource]="appointmentsData"
+                [remoteFiltering]="true"
+                [views]='["day", "week", "month","agenda"]'
+                currentView="month"
+                allDayExpr="allDayEvent"
+                [currentDate]=currentDate
+                [startDayHour]=UserSettings.startHour
+                [endDayHour]=UserSettings.endHour
+                [height]="800"
+                textExpr="teur"
+              
+                [cellDuration]=UserSettings.cellDuration
+                [resources]="resources"
+                startDateExpr="startTime"
+                endDateExpr="endTime"
+                [rtlEnabled]="true"
+                [firstDayOfWeek]="0"
+                [showAllDayPanel]="true"
+                (onAppointmentClick)="onAppointmentClick($event)" (cellClick)="OncellClick($event)" (onAppointmentFormOpening)="onAppointmentFormCreated($event)">
+
+    <div class="devendra" *dxTemplate="let showtime of 'appointment-template'">
+      <div style="border-color:red;" class='showtime-preview'>
+        <div [style.color]="getTextColor(showtime.hexForeColor,showtime.hexBackColor)" [ngStyle]="{'background-color':getbackColor(showtime.hexBackColor,showtime.hexForeColor)}" [ngClass]="showtime.isDeleted ?'strikethrough': 'null' "><span class="bardiv" [ngStyle]="{'background-color':getbarColor(showtime.hexBarColor)}"></span>{{showtime.teur}}</div>
+
+        <div [style.color]="getTextColor(showtime.hexForeColor,showtime.hexBackColor)" [ngStyle]="{'background-color':getbackColor(showtime.hexBackColor,showtime.hexForeColor)}" class='dropdown-appointment-dates'>
+          {{(showtime.startTime | date:'shortTime') + ' - ' + (showtime.endTime | date:'shortTime')}}
+        </div>
+      </div>
+    </div>
+    <dxo-editing #editingOptions
+                 [allowAdding]=UserSettings.isCrud
+                 [allowUpdating]=UserSettings.isCrud
+                 [allowDeleting]=UserSettings.isCrud
+                 [allowResizing]="false"
+                 [allowDragging]=UserSettings.isCrud></dxo-editing>
+    <dxi-resource fieldExpr="ownerIds"
+                  label="text"
+                  [allowMultiple]="true"
+                  [dataSource]="owners">
+    </dxi-resource>
+    <dxi-resource fieldExpr="label"
+                  [allowMultiple]="false"
+                  label="text"
+                  colorExpr="color"
+                  useColorAsDefault=false
+                  [dataSource]="LabelsData">
+    </dxi-resource>
+
+
+  </dx-scheduler>
+
+</ng-container>
+<!--<dx-scheduler [dataSource]="appointmentsData"
+              [remoteFiltering]="true"
+              [views]='["day", "week", "month"]'
+              currentView="month"
+              [currentDate]=currentDate
+              [startDayHour]="StartHour"
+              [endDayHour]="EndHour"
+              [height]="800"
+              textExpr="teur"
+              appointmentTemplate="appointment-template"
+              [cellDuration]=20
+              [resources]="resources"
+              startDateExpr="startTime"
+              endDateExpr="endTime"
+              [rtlEnabled]="true"
+              [firstDayOfWeek]="0"
+              [showAllDayPanel]="true"
+              allDayExpr="AllDayEvent"   (onAppointmentClick)="onAppointmentClick($event)" (onAppointmentFormOpening)="onAppointmentFormCreated($event)">
+  <div *dxTemplate="let showtime of 'appointment-template'">
+    <div class='showtime-preview'>
+      <div [ngClass]="showtime.isDeleted ?'strikethrough': 'null' ">{{showtime.teur}}</div>
+
+      <div class='dropdown-appointment-dates'>
+        {{(showtime.startTime | date:'shortTime') + '- ' + (showtime.endTime | date:'shortTime')}}
+      </div>
+    </div>
+  </div>
+  <dxo-editing #editingOptions
+               [allowAdding]="true"
+               [allowUpdating]="true"
+               [allowDeleting]="true"
+               [allowResizing]="true"
+               [allowDragging]="true"></dxo-editing>
+  <dxi-resource fieldExpr="ownerIds"
+                label="text"
+                [allowMultiple]="true"
+                [dataSource]="owners">
+  </dxi-resource>
+  <dxi-resource fieldExpr="label"
+                [allowMultiple]="false"
+                label="text"
+                colorExpr="color"
+                useColorAsDefault="false"
+                [dataSource]="LabelsData">
+  </dxi-resource>
+
+
+</dx-scheduler>-->
