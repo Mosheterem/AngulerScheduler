@@ -1,39 +1,39 @@
 
-  <div class="card"
-       [ng2-loading]="showSpinner">
+<div class="card"
+     [ng2-loading]="showSpinner">
 
 
+  
+  <div class="login_section">
+    <form [formGroup]="loginFormGroup">
+      <div class="logo"><a href="#"><img style="width:50%;height:50%" class="logo_login" src="./assets/images/web-logo1.png" alt="" /></a></div>
+      <div class="form_box">
+        
+        <label>שם משתמש / אימייל</label>
+        <input style="text-align:center;" dir="ltr" type="text" formControlName="Username" />
+        <label class="text-danger" *ngIf="loginFormGroup.get('Username').invalid && loginFormGroup.get('Username').touched">* חובה לקלוט כתובת אימייל</label>
+      </div>
 
-    <div class="login_section">
+      <div class="form_box">
+        <label>ססמא לכניסה</label>
+        <input style="text-align:center;" dir="ltr" type="password" formControlName="Password" />
+        <label class="text-danger" *ngIf="loginFormGroup.get('Password').invalid && loginFormGroup.get('Password').touched">* חובה לקלוט ססמא</label>
+      </div>
+      <div class="form_box">
+        <label class="text-danger" *ngIf="loginerrormessage!=null && loginerrormessage!=''">* {{loginerrormessage}}</label>
 
-      <form [formGroup]="loginFormGroup">
-        <div class="logo"><a href="#"><img src="" alt="" /></a></div>
-        <div class="form_box">
-          <label>שם משתמש / אימייל</label>
-          <input style="text-align:center;" dir="ltr" type="text" formControlName="Username" />
-          <label class="text-danger" *ngIf="loginFormGroup.get('Username').invalid && loginFormGroup.get('Username').touched">* חובה לקלוט כתובת אימייל</label>
+      </div>
+      <div class="form_box">
+        <div class="checkbox_field">
+          <input id="checkbox1" type="checkbox" name="checkbox" formControlName="RememberMe">
+          <label for="checkbox1"><span></span> שמור ססמא </label>
         </div>
-
-        <div class="form_box">
-          <label>ססמא לכניסה</label>
-          <input style="text-align:center;" dir="ltr" type="password" formControlName="Password" />
-          <label class="text-danger" *ngIf="loginFormGroup.get('Password').invalid && loginFormGroup.get('Password').touched">* חובה לקלוט ססמא</label>
-        </div>
-        <div class="form_box">
-          <label class="text-danger" *ngIf="loginerrormessage!=null && loginerrormessage!=''">* {{loginerrormessage}}</label>
-
-        </div>
-        <div class="form_box">
-          <div class="checkbox_field">
-            <input id="checkbox1" type="checkbox" name="checkbox" formControlName="RememberMe">
-            <label for="checkbox1"><span></span> שמור ססמא </label>
-          </div>
-          <a routerLink="/public/forgotpassword" class="forget">שכחתי ססמא</a>
-        </div>
-        <div class="form_box">
-          <button (click)="login()" class="blue_btn">התחבר</button>
-        </div>
-        <!--<div class="form_box">
+        <a routerLink="/public/forgotpassword" class="forget">שכחתי ססמא</a>
+      </div>
+      <div class="form_box">
+        <button (click)="login()" class="blue_btn">התחבר</button>
+      </div>
+      <!--<div class="form_box">
         <div class="bar_code"> <img src="" alt="" (click)="Loginwithbarcode()" /> </div>
         <div class="form_switch">
           <label class="switch">
@@ -43,8 +43,8 @@
           <p>Login With RFID Card</p>
         </div>
       </div>-->
-      </form>
-    </div>
+    </form>
   </div>
+</div>
      <p class="copy">&copy; 2018 terem. All rights reserved</p>
    
