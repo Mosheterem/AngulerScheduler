@@ -8,13 +8,14 @@ import { UserService } from '../../Services/user.service';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
 import { ResetPasswordComponent } from './ResetPassword/reset-password/reset-password.component';
+import { ThankyouComponent } from './Feedback/thankyou/thankyou.component';
 
-
-
+//ThankyouComponent
 const routes : Routes = [
     {path : '', redirectTo:'login', pathMatch:'full'},
     {path : 'login', component : LoginComponent},
   { path: 'forgotpassword', component: ForgotpasswordComponent },
+  { path: 'thankyou', component: ThankyouComponent },
   { path: 'resetPassword/:email', component: ResetPasswordComponent }
 ]
 
@@ -22,7 +23,8 @@ const routes : Routes = [
   declarations: [
     LoginComponent,
     ForgotpasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ThankyouComponent
   ],
   imports: [
     CommonModule,
