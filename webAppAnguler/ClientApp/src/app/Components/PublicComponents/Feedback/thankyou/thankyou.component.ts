@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-thankyou',
@@ -7,20 +8,37 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./thankyou.component.css']
 })
 export class ThankyouComponent implements OnInit {
-  param1: string;
-  param2: string;
-  constructor(private route: ActivatedRoute) {
+  email: string;
+  registerForm: FormGroup;
+  submitted = false;
+  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder) {
 
     console.log('Called Constructor');
     this.route.queryParams.subscribe(params => {
-      this.param1 = params['param1'];
-      this.param2 = params['param2'];
+      this.email = params['email'];
+     
     });
-    console.log(this.param1 + "nd" + this.param2);
+    console.log(this.email);
+  }
+  get f() { return this.registerForm.controls; }
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      mobile: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+     
+    });
   }
 
-  ngOnInit() {
-alert();
+  onSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.registerForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)')
   }
 
 }

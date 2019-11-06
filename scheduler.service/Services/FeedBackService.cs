@@ -1,8 +1,6 @@
 ﻿using scheduler.Model.ViewModel;
 using scheduler.service.IService;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace scheduler.service.Services
 {

@@ -3,7 +3,7 @@ html, body {
   min-height: 100%;
 }
 
-body, div, form, input, select, p {
+body, div, form, input, select, p, textarea {
   padding: 0;
   margin: 0;
   outline: none;
@@ -63,11 +63,10 @@ form {
   flex-direction: column;
 }
 
-input, select {
+input, select, textarea {
   padding: 5px;
   margin-bottom: 30px;
   background: transparent;
-  border: none;
   border-bottom: 1px solid #eee;
 }
 
@@ -121,21 +120,28 @@ button {
   button:hover, .btn-item:hover {
     background: #85d6de;
   }
+.invalid-feedback {
 
-@media (min-width: 568px) {
-  html, body {
-    height: 100%;
-  }
-
-  .main-block {
-    flex-direction: row;
-    height: calc(100% - 50px);
-  }
-
-  .left-part, form {
-    flex: 1;
-    height: auto;
-  }
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 50%;
+  color: red;
 }
+
+  @media (min-width: 568px) {
+    html, body {
+      height: 100%;
+    }
+
+    .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+    }
+
+    .left-part, form {
+      flex: 1;
+      height: auto;
+    }
+  }
 
 
