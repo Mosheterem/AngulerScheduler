@@ -11,7 +11,7 @@ namespace webAppAnguler.Controllers
 {
 
     [ApiController]
-    [TypeFilter(typeof(CustomException))]
+   // [TypeFilter(typeof(CustomException))]
     public class FeedBackController
     {
         private readonly IFeedBackService _feedbackServices;
@@ -20,7 +20,7 @@ namespace webAppAnguler.Controllers
             _feedbackServices = feedbackServices;
         }
         [HttpPost]
-        [Route("api/feedback/AddFeedback")]
+        [Route("api/Feedback/AddFeedback")]
         public async Task<ResponseModel> Addfeedback([FromBody] FeedBack feedBack)
         {
 
@@ -29,7 +29,7 @@ namespace webAppAnguler.Controllers
         }
 
         [HttpGet]
-        [Route("api/feedback/AddResponse")]
+        [Route("api/Feedback/AddResponse")]
         public async Task<ResponseModel> AddFirstResponse(string emailid)
         {
             return await Task.FromResult(_feedbackServices.AddFirstResponse(emailid));

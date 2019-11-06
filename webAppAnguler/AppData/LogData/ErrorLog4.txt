@@ -1,9 +1,9 @@
 
-Log Entry : 13:30:19 יום שישי 02 אוגוסט 2019
+Log Entry : 17:13:58 יום רביעי 06 נובמבר 2019
   :
-  :Error converting value {null} to type 'System.Int32'. Path 'label', line 1, position 112.
+  :Unable to resolve service for type 'scheduler.service.IService.IFeedBackService' while attempting to activate 'webAppAnguler.Controllers.FeedBackController'.
 -------------------------------
-r: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+
 -------------------------------
 ----------
 too busy to accept new connections; or there was a resource limitation (insufficient memory or maximum allowed connections) on the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)

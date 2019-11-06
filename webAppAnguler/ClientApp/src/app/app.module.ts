@@ -30,6 +30,7 @@ import { Component, enableProdMode } from '@angular/core';
 import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NavbarComponent } from './Containers/Container/navbar-component/navbar-component.component';
+import { feedBackService } from './Services/feedBack.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,7 @@ import { NavbarComponent } from './Containers/Container/navbar-component/navbar-
  
     UtilitiesService,
     AuthGuardService,
-    HomeService,
+    HomeService, feedBackService,
     { provide: LOCALE_ID, useValue: 'he' },
     //{ provide: LOCALE_ID, useValue: "he-IL" },
     { provide: HTTP_INTERCEPTORS, useClass: JWTIntereptorService, multi: true, useValue: "he-IL" }],
