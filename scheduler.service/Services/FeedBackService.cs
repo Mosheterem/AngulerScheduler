@@ -1,4 +1,5 @@
 ﻿using scheduler.Model.ViewModel;
+using scheduler.Repository.IRepositories;
 using scheduler.service.IService;
 using System;
 
@@ -7,8 +8,8 @@ namespace scheduler.service.Services
     public class FeedBackService : IFeedBackService
     {
 
-        protected IFeedBackService _feedBackService;
-        public FeedBackService(IFeedBackService feedBackService)
+        protected IFeedBackRepository _feedBackService;
+        public FeedBackService(IFeedBackRepository feedBackService)
         {
             _feedBackService = feedBackService;
         }
@@ -19,8 +20,8 @@ namespace scheduler.service.Services
 
             try
             {
-                var usre = _feedBackService.AddFeedback(feedBack);
-                if (usre != null)
+                var usre = _feedBackService.UpdateMoreInfomation(feedBack);
+                if (usre)
                 {
 
                     response.data = usre;
@@ -52,8 +53,8 @@ namespace scheduler.service.Services
 
             try
             {
-                var usre = _feedBackService.AddFirstResponse(emailId);
-                if (usre != null)
+                var usre = _feedBackService.AddFirstNotification(emailId);
+                if (usre)
                 {
 
                     response.data = usre;

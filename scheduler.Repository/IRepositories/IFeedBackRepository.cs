@@ -5,7 +5,7 @@ using System.Text;
 
 namespace scheduler.Repository.IRepositories
 {
-    interface IFeedBackRepository
+    public interface IFeedBackRepository
     {
 
         bool UpdateMoreInfomation(FeedBack objFeedBack);

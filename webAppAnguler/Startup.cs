@@ -24,6 +24,7 @@ using AutoMapper;
 using scheduler.Repository.IRepositories;
 using scheduler.Repository.Repositories;
 using scheduler.Repository.Infrastructure;
+using scheduler.EF.Model.Pub;
 
 namespace webAppAnguler
 {
@@ -60,19 +61,24 @@ namespace webAppAnguler
             services.Configure<CustomConfiguration>(Configuration.GetSection("CustomConfiguration"));
             services.AddDbContext<LoginDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InstruTrackContext")));
             services.AddDbContext<SchedulerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InstruTrackContext")));
+            services.AddDbContext<PubContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PubContext")));
             scheduler.service.Common_Utilities.Utilities.Configure(Configuration);
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             Mapper.Initialize(cfg => cfg.AddProfile<Automapper>());
             services.AddAutoMapper();
-            //services.AddTransient<IUserService, UserService>();
+            
             services.AddTransient<ICaltUserRepository, CaltUserRepository>();
             services.AddScoped<ICaltUserService, CaltUserService>();
             //services.AddTransient<IAppontmentRepository, AppontmentRepository>();
             services.AddTransient<IAppontmentService, AppontmentService>();
-       
+
+            services.AddScoped<IFeedBackRepository, FeedBackRepository>();
+            services.AddTransient<IFeedBackService, FeedBackService>();
+
+
             //services.AddTransient<ICaltUserService, CaltUserService>();
-           
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 

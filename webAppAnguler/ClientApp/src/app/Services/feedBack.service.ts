@@ -22,6 +22,7 @@ export class feedBackService {
 
  
   AddfirstRequest(email) {
+  
    // return <Observable<ResponseModel>>this.httpdataservice.GetData("feedback/AddResponse?emailid=", email, null);
     return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/AddResponse?emailid=" + email);
      
@@ -30,7 +31,7 @@ export class feedBackService {
  
 
   AddFeedback(data) {
-    return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback=" + data, null)
+    return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback",data, null)
   }
 
 }

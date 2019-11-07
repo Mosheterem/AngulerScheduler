@@ -38,8 +38,8 @@ export class ThankyouComponent implements OnInit {
   get f() { return this.registerForm.controls; }
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      mobile: ['', Validators.required],
+      fullName: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
       note: ['', Validators.minLength(25)],
       email: ['', [Validators.required, Validators.email]],
      
@@ -51,7 +51,7 @@ export class ThankyouComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
-    this._feedBackService.AddFeedback(JSON.stringify(this.registerForm.value)).subscribe(resp => {
+    this._feedBackService.AddFeedback(this.registerForm.value).subscribe(resp => {
       if (resp.status == Status.Success) {
 
         alert('well come to the page')

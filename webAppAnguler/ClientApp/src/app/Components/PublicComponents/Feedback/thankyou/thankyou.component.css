@@ -145,3 +145,15 @@ button {
   }
 
 
+
+input, select, textarea {
+  margin-bottom: 0;
+  margin-top: 15px;
+  width:100%;
+}
+.invalid-feedback > div {
+  color: red;
+}
+.title { margin-bottom:0;}
+
+.left-part { padding:25px 0;}

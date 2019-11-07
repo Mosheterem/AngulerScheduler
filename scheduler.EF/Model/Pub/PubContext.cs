@@ -33,9 +33,9 @@ namespace scheduler.EF.Model.Pub
             return @"Server=tcp:23.97.186.48\\mssqlserver,50841;Database=PUB; User ID=sa; Password=r4199357!;MultipleActiveResultSets=true";
 
         }
-        public DbSet<FeedBack> TASKs { get; set; }
+        public DbSet<FeedBack> FeedBacks { get; set; }
 
-
+       
 
         /// <summary>
         /// AddFirstCall
@@ -65,7 +65,7 @@ namespace scheduler.EF.Model.Pub
                         con.Open();
 
 
-                    string query = "insert into FeedBack (Email) values('" + EmailId + "')";
+                    string query = "insert into UseclickResponse (Email) values('" + EmailId + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     var ss = cmd.ExecuteNonQuery();
                     return new Tuple<bool, dynamic>(rowAffected > 0 ? true : false, Errormsg.Value);

@@ -4,17 +4,13 @@
   <title>Registration form</title>
  
 </head>
-<body dir="rtl">
+<body dir="rtl" class="">
   <div class="main-block">
-    <div class="left-part">
+    <!--<div class="left-part">
       <i class="fas fa-graduation-cap"></i>
       <h1 style="color:aqua">Register with us</h1>
       <p>שתף את המידע שלך לתגובה המהירה</p>
-      <!--<div class="btn-group">
-        <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>
-        <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
-      </div>-->
-    </div>
+    </div>-->
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
@@ -24,9 +20,9 @@
       </div>
       <div class="info">
         <div class="form-group">
-          <input formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" class="fname" type="text" name="name" placeholder="שם מלא">
-          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-            <div *ngIf="f.firstName.errors.required">נדרש שם פרטי</div>
+          <input formControlName="fullName" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" class="fname" type="text" name="name" placeholder="שם מלא">
+          <div *ngIf="submitted && f.fullName.errors" class="invalid-feedback">
+            <div *ngIf="f.fullName.errors.required">נדרש שם פרטי</div>
           </div>
         </div>
 
@@ -42,13 +38,13 @@
 
 
         <div class="form-group">
-          <input formControlName="mobile" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" type="text" name="name" placeholder="מספר טלפון">
-          <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
-            <div *ngIf="f.mobile.errors.required">חובה לנייד</div>
+          <input formControlName="phoneNumber" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" type="text" name="name" placeholder="מספר טלפון">
+          <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.phoneNumber.errors.required">חובה לנייד</div>
           </div>
         </div>
         <div class="form-group">
-          <textarea formControlName="note" cols="30" rows="10" ng-model="f.mobile.note" type="text" name="name" placeholder="הודעה"></textarea>
+          <textarea formControlName="note" cols="30" rows="10" ng-model="f.note" type="text" name="name" placeholder="הודעה"></textarea>
 
         </div>
       </div>
