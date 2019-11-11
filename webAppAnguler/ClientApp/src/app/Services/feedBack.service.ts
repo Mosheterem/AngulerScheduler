@@ -31,7 +31,7 @@ export class feedBackService {
  
 
   AddFeedback(data) {
-    return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback",data, null)
+    return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback",data)
   }
 
 }

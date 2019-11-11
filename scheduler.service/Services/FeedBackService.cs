@@ -54,7 +54,7 @@ namespace scheduler.service.Services
             try
             {
                 var usre = _feedBackService.AddFirstNotification(emailId);
-                if (usre)
+                if (usre>0)
                 {
 
                     response.data = usre;

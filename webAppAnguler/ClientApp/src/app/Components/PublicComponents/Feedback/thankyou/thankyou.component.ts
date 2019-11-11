@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { feedBackService } from 'src/app/Services/feedBack.service';
 import { Status } from 'src/app/Models/response-model';
+import { CommonAlertService } from 'src/app/Helpers/common-alert.service';
 
 @Component({
   selector: 'app-thankyou',
@@ -13,27 +14,25 @@ export class ThankyouComponent implements OnInit {
   email: string;
   registerForm: FormGroup;
   submitted = false;
-  //datatosend = null;
+  returnvalue: Number;
 
-  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder, private _feedBackService: feedBackService, ) {
+  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder, private _feedBackService: feedBackService, private alert: CommonAlertService ) {
 
-   // console.log('Called Constructor');
+
     this.route.queryParams.subscribe(params => {
-      this.email = params['email'];
+      this.email = params['key'];
      
     });
 
     this._feedBackService.AddfirstRequest(this.email).subscribe(resp => {
       if (resp.status == Status.Success) {
-
-        alert('well come to the page')
+        this.returnvalue = resp.data;
+        //alert(resp.data);
       }
       else {
-      
+        this.alert.ShowErrorAlert(resp.message);
       }
-    });
-   
-    
+    });  
   }
   get f() { return this.registerForm.controls; }
   ngOnInit() {
@@ -41,8 +40,8 @@ export class ThankyouComponent implements OnInit {
       fullName: ['', Validators.required],
       phoneNumber: ['', Validators.required],
       note: ['', Validators.minLength(25)],
-      email: ['', [Validators.required, Validators.email]],
-     
+      id: ['',Validators.minLength(0)],
+      email: ['', [Validators.required, Validators.email]]  
     });
   }
 
@@ -51,16 +50,17 @@ export class ThankyouComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
+
+    this.registerForm.controls['id'].setValue(this.returnvalue);
     this._feedBackService.AddFeedback(this.registerForm.value).subscribe(resp => {
       if (resp.status == Status.Success) {
-
-        alert('well come to the page')
+        this.alert.ShowSuccessAlert("תודה! אנו ניצור איתך קשר בקרוב");
       }
       else {
-     
+        this.alert.ShowErrorAlert(resp.message);
       }
     });
-    //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+   
   }
 
 }

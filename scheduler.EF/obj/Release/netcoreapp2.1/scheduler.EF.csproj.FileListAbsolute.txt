@@ -40,3 +40,17 @@ D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.EF\obj\Release\netcoreapp2.1\
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.csproj.CopyComplete
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.dll
 D:\Angular_7\webAppAnguler\webAppAnguler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.pdb
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.EF.deps.json
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.EF.runtimeconfig.json
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.EF.runtimeconfig.dev.json
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.EF.dll
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.EF.pdb
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.Model.dll
+D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Release\netcoreapp2.1\scheduler.Model.pdb
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.csprojAssemblyReference.cache
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.csproj.CoreCompileInputs.cache
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.AssemblyInfoInputs.cache
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.AssemblyInfo.cs
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.csproj.CopyComplete
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.dll
+D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Release\netcoreapp2.1\scheduler.EF.pdb

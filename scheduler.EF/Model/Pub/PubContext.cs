@@ -42,7 +42,7 @@ namespace scheduler.EF.Model.Pub
         /// </summary>
         /// <param name="EmailId"></param>
         /// <returns></returns>
-        public Tuple<bool, dynamic> AddFirstCall(string EmailId)
+        public Tuple<int, dynamic> AddFirstCall(string ResponseKey)
         {
             FeedBack result = new FeedBack();
             try
@@ -56,19 +56,14 @@ namespace scheduler.EF.Model.Pub
                     DbType = System.Data.DbType.String,
                     Direction = System.Data.ParameterDirection.Output
                 };
-
-                int idex = 0;
-                int rowAffected = 0;
                 using (var con = new SqlConnection(strConnectionString))
                 {
                     if (con.State == ConnectionState.Closed)
                         con.Open();
-
-
-                    string query = "insert into UseclickResponse (Email) values('" + EmailId + "')";
+                    string query = "insert into Feedback (ResponseKey) values('" + ResponseKey + "') SELECT SCOPE_IDENTITY()";
                     SqlCommand cmd = new SqlCommand(query, con);
-                    var ss = cmd.ExecuteNonQuery();
-                    return new Tuple<bool, dynamic>(rowAffected > 0 ? true : false, Errormsg.Value);
+                    int modified = Convert.ToInt32(cmd.ExecuteScalar());
+                    return new Tuple<int, dynamic>(modified, Errormsg.Value);
                 }
 
             }
@@ -80,6 +75,71 @@ namespace scheduler.EF.Model.Pub
 
         }
 
+        private string Search(string key)
+        {
+           
+            SqlCommand command;
+            SqlDataReader dreader;
+            string responceKey = "";
+            FeedBack result = new FeedBack();
+            try
+            {
+                string strConnectionString = GetConnectionString();
+
+                var Errormsg = new SqlParameter
+                {
+                    ParameterName = "@ErrorMsg",
+                    Size = -1,
+                    DbType = System.Data.DbType.String,
+                    Direction = System.Data.ParameterDirection.Output
+                };
+
+             
+                using (var con = new SqlConnection(strConnectionString))
+                {
+                    if (con.State == ConnectionState.Closed)
+                        con.Open();
+
+
+                    string query = "select ResponseKey from FeedBack where key = " + key + " ";
+                    command = new SqlCommand(query, con);
+                    try
+                    {
+                        dreader = command.ExecuteReader();
+                        if (dreader.Read())
+                        {
+                            responceKey = dreader[1].ToString();
+
+                            return responceKey;
+
+
+                        }
+                        else
+                        {
+                            dreader.Close();
+                            return responceKey;
+                        }
+                       
+                    }
+                    catch (Exception)
+                    {
+                        return responceKey;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            // comm = new SqlCommand("select * from student_detail where roll_no = " + txtrn.Text + " ", conn);
+
+        }
         /// <summary>
         /// AddFeedback
         /// </summary>
@@ -107,9 +167,14 @@ namespace scheduler.EF.Model.Pub
                     if (con.State == ConnectionState.Closed)
                         con.Open();
 
+                    string query = "insert into FeedBack (FullName,Email,Mobile,Note,ResponseTime,Seen) values('" + feedBack.FullName + "','" + feedBack.Email + "','" + feedBack.PhoneNumber + "','" + feedBack.Note + "','" + DateTime.Now + "','" + 0 + "')";
 
+                    if (feedBack.Id>0)
+                    {
+                        query = "update FeedBack set fullname='" + feedBack.FullName + "',Email='"+feedBack.Email+ "',Mobile='" + feedBack.PhoneNumber + "',Note='" + feedBack.Note + "',ResponseTime='"+DateTime.Now+"',seen='"+0+ "' where id='" + feedBack.Id + "'";
+                    }
+                
 
-                    string query = "insert into FeedBack (FullName,Email,Mobile,Note) values('" + feedBack.FullName + "','" + feedBack.Email + "','" + feedBack.PhoneNumber + "','" + feedBack.Note + "')";
                     SqlCommand cmd = new SqlCommand(query, con);
                     var ss = cmd.ExecuteNonQuery();
                     return new Tuple<bool, dynamic>(rowAffected > 0 ? true : false, Errormsg.Value);
