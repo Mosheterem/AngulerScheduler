@@ -46,14 +46,14 @@ namespace scheduler.service.Services
             return response;
         }
 
-        public ResponseModel AddFirstResponse(string emailId)
+        public ResponseModel AddFirstResponse(string key,string seKey)
         {
             ResponseModel response = new ResponseModel();
             response.data = String.Empty;
 
             try
             {
-                var usre = _feedBackService.AddFirstNotification(emailId);
+                var usre = _feedBackService.AddFirstNotification(key, seKey);
                 if (usre>0)
                 {
 

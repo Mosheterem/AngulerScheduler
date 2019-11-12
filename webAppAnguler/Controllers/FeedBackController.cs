@@ -30,9 +30,9 @@ namespace webAppAnguler.Controllers
 
         [HttpGet]
         [Route("api/Feedback/AddResponse")]
-        public async Task<ResponseModel> AddFirstResponse(string emailid)
+        public async Task<ResponseModel> AddFirstResponse(string key,string secKey)
         {
-            return await Task.FromResult(_feedbackServices.AddFirstResponse(emailid));
+            return await Task.FromResult(_feedbackServices.AddFirstResponse(key, secKey));
         }
     }
 }

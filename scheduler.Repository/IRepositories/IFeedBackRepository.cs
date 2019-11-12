@@ -9,6 +9,6 @@ namespace scheduler.Repository.IRepositories
     {
 
         bool UpdateMoreInfomation(FeedBack objFeedBack);
-        int AddFirstNotification(string name);
+        int AddFirstNotification(string key,string secKey);
     }
 }

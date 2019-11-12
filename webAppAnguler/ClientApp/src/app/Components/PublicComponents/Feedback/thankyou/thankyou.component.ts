@@ -11,7 +11,8 @@ import { CommonAlertService } from 'src/app/Helpers/common-alert.service';
   styleUrls: ['./thankyou.component.css']
 })
 export class ThankyouComponent implements OnInit {
-  email: string;
+  key: string;
+  seckey: string;
   registerForm: FormGroup;
   submitted = false;
   returnvalue: Number;
@@ -20,11 +21,12 @@ export class ThankyouComponent implements OnInit {
 
 
     this.route.queryParams.subscribe(params => {
-      this.email = params['key'];
+      this.key = params['key'];
+      this.seckey = params['seckey'];
      
     });
 
-    this._feedBackService.AddfirstRequest(this.email).subscribe(resp => {
+    this._feedBackService.AddfirstRequest(this.key, this.seckey).subscribe(resp => {
       if (resp.status == Status.Success) {
         this.returnvalue = resp.data;
         //alert(resp.data);
@@ -39,7 +41,7 @@ export class ThankyouComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
       phoneNumber: ['', Validators.required],
-      note: ['', Validators.minLength(25)],
+      note: ['', Validators.minLength(0)],
       id: ['',Validators.minLength(0)],
       email: ['', [Validators.required, Validators.email]]  
     });

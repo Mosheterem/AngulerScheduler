@@ -21,10 +21,10 @@ export class feedBackService {
   }
 
  
-  AddfirstRequest(email) {
+  AddfirstRequest(key,seckey) {
   
-   // return <Observable<ResponseModel>>this.httpdataservice.GetData("feedback/AddResponse?emailid=", email, null);
-    return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/AddResponse?emailid=" + email);
+    // return <Observable<ResponseModel>>this.httpdataservice.GetData("feedback/AddResponse?emailid=", email, null);
+    return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/AddResponse?key=" + key + "&secKey=" + seckey);
      
   }
  

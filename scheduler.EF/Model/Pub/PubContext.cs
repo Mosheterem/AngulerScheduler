@@ -42,7 +42,7 @@ namespace scheduler.EF.Model.Pub
         /// </summary>
         /// <param name="EmailId"></param>
         /// <returns></returns>
-        public Tuple<int, dynamic> AddFirstCall(string ResponseKey)
+        public Tuple<int, dynamic> AddFirstCall(string ResponseKey,string secKey)
         {
             FeedBack result = new FeedBack();
             try
@@ -60,7 +60,7 @@ namespace scheduler.EF.Model.Pub
                 {
                     if (con.State == ConnectionState.Closed)
                         con.Open();
-                    string query = "insert into Feedback (ResponseKey) values('" + ResponseKey + "') SELECT SCOPE_IDENTITY()";
+                    string query = "insert into Feedback (ResponseKey,ResponseSecKey) values('" + ResponseKey + "','"+secKey+"') SELECT SCOPE_IDENTITY()";
                     SqlCommand cmd = new SqlCommand(query, con);
                     int modified = Convert.ToInt32(cmd.ExecuteScalar());
                     return new Tuple<int, dynamic>(modified, Errormsg.Value);
@@ -75,7 +75,7 @@ namespace scheduler.EF.Model.Pub
 
         }
 
-        private string Search(string key)
+        private string Search(string key,string secKey)
         {
            
             SqlCommand command;

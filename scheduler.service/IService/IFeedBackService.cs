@@ -7,7 +7,7 @@ namespace scheduler.service.IService
 {
    public interface IFeedBackService
     {
-        ResponseModel AddFirstResponse(string emailId);
+        ResponseModel AddFirstResponse(string key,string seckey);
         ResponseModel AddFeedback(FeedBack feedBack);
     }
 }

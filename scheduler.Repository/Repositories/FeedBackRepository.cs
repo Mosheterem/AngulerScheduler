@@ -15,12 +15,13 @@ namespace scheduler.Repository.Repositories
             _pubContext = pubContext;
 
         }
-        public int AddFirstNotification(string name)
+        public int AddFirstNotification(string key,string secKey)
         {
             try { 
             FeedBack obje = new FeedBack();
-            obje.Email = name;
-               return _pubContext.AddFirstCall(name).Item1;
+            obje.ResponseKey = key;
+                obje.ResponseSecKey = secKey;
+                return _pubContext.AddFirstCall(key,secKey).Item1;
                // return true;
             }
             catch

@@ -12,6 +12,7 @@ namespace scheduler.Model.ViewModel
         public string Note { get; set; }
         public string FullName { get; set; }
         public Boolean Seen { get; set; }
-        public DateTime ResponseKey { get; set; }
+        public string ResponseKey { get; set; }
+        public string ResponseSecKey { get; set; }
     }
 }
