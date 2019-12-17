@@ -78,5 +78,38 @@ namespace scheduler.service.Services
 
             return response;
         }
+
+        public ResponseModel Unsubscribe(string key)
+        {
+            ResponseModel response = new ResponseModel();
+            response.data = String.Empty;
+
+            try
+            {
+                var data = _feedBackService.Unsubscribe(key);
+                if (data)
+                {
+
+                    response.data = data;
+                    response.status = Status.Success;
+                }
+                else
+                {
+                    response.data = false;
+                    response.message = "Key not found";
+                    response.status = Status.Warning;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                response.data = null;
+                response.message = "internal Server Error";
+                response.status = Status.Error;
+
+            }
+
+            return response;
+        }
     }
 }

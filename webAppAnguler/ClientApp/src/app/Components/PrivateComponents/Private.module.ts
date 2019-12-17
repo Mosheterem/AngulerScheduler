@@ -18,6 +18,7 @@ import { BmaComponent } from './Calculation/BCalc/bma/bma.component';
 import { BcardHomeComponent } from './Bcard/bcard-home/bcard-home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OrderByPipe } from 'src/app/Helpers/orderByPipe';
+//import { MainComponent } from './Bingo/Bcard/main/main.component';
 //registerLocaleData(he);
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   ,
   { path: "master", component: BcardHomeComponent, canActivate: [AuthGuardService] },
   { path: "appintmnents", component: AppintmnentsComponent, canActivate: [AuthGuardService] },
-  { path: "bma", component: BmaComponent, canActivate: [AuthGuardService] }
+  { path: "bma", component: BmaComponent, canActivate: [AuthGuardService] },
+  //{ path: "Bcard", component: MainComponent }
   
 ]                                                              
 
@@ -43,7 +45,7 @@ const routes: Routes = [
     GroupByPipe,
     OrderByPipe,
     AddAppointmentComponent,
-    BmaComponent
+    //BmaComponent, MainComponent
     //AppointmentReportComponent
   ],
   imports: [

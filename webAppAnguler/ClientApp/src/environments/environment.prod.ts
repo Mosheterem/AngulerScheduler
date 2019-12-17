@@ -4,5 +4,6 @@ export const environment = {
 
  // apiEndpoint: "http://lawpalace.co.il:8082/api",
   //production: false,
-  Url: "https://www.lawpalace.co.il/api",
+  //Url: "https://www.lawpalace.co.il/api",
+  Url: "http://localhost:8989/api",
 };

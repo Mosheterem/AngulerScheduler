@@ -34,5 +34,12 @@ namespace webAppAnguler.Controllers
         {
             return await Task.FromResult(_feedbackServices.AddFirstResponse(key, secKey));
         }
+
+        [HttpGet]
+        [Route("api/Feedback/Unsubscribe")]
+        public async Task<ResponseModel> Unsubscribe(string key)
+        {
+            return await Task.FromResult(_feedbackServices.Unsubscribe(key));
+        }
     }
 }

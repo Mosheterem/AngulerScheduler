@@ -10,5 +10,7 @@ namespace scheduler.Repository.IRepositories
 
         bool UpdateMoreInfomation(FeedBack objFeedBack);
         int AddFirstNotification(string key,string secKey);
+
+        bool Unsubscribe(string key);
     }
 }

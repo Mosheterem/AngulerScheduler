@@ -35,14 +35,14 @@ namespace scheduler.EF.Model.Pub
         }
         public DbSet<FeedBack> FeedBacks { get; set; }
 
-       
+
 
         /// <summary>
         /// AddFirstCall
         /// </summary>
         /// <param name="EmailId"></param>
         /// <returns></returns>
-        public Tuple<int, dynamic> AddFirstCall(string ResponseKey,string secKey)
+        public Tuple<int, dynamic> AddFirstCall(string ResponseKey, string secKey)
         {
             FeedBack result = new FeedBack();
             try
@@ -60,7 +60,7 @@ namespace scheduler.EF.Model.Pub
                 {
                     if (con.State == ConnectionState.Closed)
                         con.Open();
-                    string query = "insert into Feedback (ResponseKey,ResponseSecKey) values('" + ResponseKey + "','"+secKey+"') SELECT SCOPE_IDENTITY()";
+                    string query = "insert into Feedback (ResponseKey,ResponseSecKey) values('" + ResponseKey + "','" + secKey + "') SELECT SCOPE_IDENTITY()";
                     SqlCommand cmd = new SqlCommand(query, con);
                     int modified = Convert.ToInt32(cmd.ExecuteScalar());
                     return new Tuple<int, dynamic>(modified, Errormsg.Value);
@@ -75,9 +75,41 @@ namespace scheduler.EF.Model.Pub
 
         }
 
-        private string Search(string key,string secKey)
+        public Tuple<bool, dynamic> Unsubscribe(string Key)
         {
-           
+            try
+            {
+                string strConnectionString = GetConnectionString();
+
+                var Errormsg = new SqlParameter
+                {
+                    ParameterName = "@ErrorMsg",
+                    Size = -1,
+                    DbType = System.Data.DbType.String,
+                    Direction = System.Data.ParameterDirection.Output
+                };
+                using (var con = new SqlConnection(strConnectionString))
+                {
+                    if (con.State == ConnectionState.Closed)
+                        con.Open();
+                    string query = "update  Feedback set ResponseSecKey='Unsubscribe me' where ResponseKey='" + Key + "' ";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    var rowAffected = cmd.ExecuteNonQuery();
+                    return new Tuple<bool, dynamic>(rowAffected > 0 ? true : false, Errormsg.Value);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            // Info.  
+
+        }
+
+        private string Search(string key, string secKey)
+        {
+
             SqlCommand command;
             SqlDataReader dreader;
             string responceKey = "";
@@ -94,7 +126,7 @@ namespace scheduler.EF.Model.Pub
                     Direction = System.Data.ParameterDirection.Output
                 };
 
-             
+
                 using (var con = new SqlConnection(strConnectionString))
                 {
                     if (con.State == ConnectionState.Closed)
@@ -119,7 +151,7 @@ namespace scheduler.EF.Model.Pub
                             dreader.Close();
                             return responceKey;
                         }
-                       
+
                     }
                     catch (Exception)
                     {
@@ -169,11 +201,11 @@ namespace scheduler.EF.Model.Pub
 
                     string query = "insert into FeedBack (FullName,Email,Mobile,Note,ResponseTime,Seen) values('" + feedBack.FullName + "','" + feedBack.Email + "','" + feedBack.PhoneNumber + "','" + feedBack.Note + "','" + DateTime.Now + "','" + 0 + "')";
 
-                    if (feedBack.Id>0)
+                    if (feedBack.Id > 0)
                     {
-                        query = "update FeedBack set fullname='" + feedBack.FullName + "',Email='"+feedBack.Email+ "',Mobile='" + feedBack.PhoneNumber + "',Note='" + feedBack.Note + "',ResponseTime='"+DateTime.Now+"',seen='"+0+ "' where id='" + feedBack.Id + "'";
+                        query = "update FeedBack set fullname='" + feedBack.FullName + "',Email='" + feedBack.Email + "',Mobile='" + feedBack.PhoneNumber + "',Note='" + feedBack.Note + "',ResponseTime='" + DateTime.Now + "',seen='" + 0 + "' where id='" + feedBack.Id + "'";
                     }
-                
+
 
                     SqlCommand cmd = new SqlCommand(query, con);
                     var ss = cmd.ExecuteNonQuery();

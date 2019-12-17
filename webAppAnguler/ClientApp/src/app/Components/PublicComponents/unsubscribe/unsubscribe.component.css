@@ -1,0 +1,57 @@
+.nav-logo {
+  overflow: visible;
+  max-height: 60px;
+  margin-top: 8px;
+  float: left;
+}
+
+.navbar-header {
+  background-color: #00aeef;
+}
+
+.navbar {
+  background-color: #00aeef;
+}
+
+.social-item.twitter {
+  padding-bottom: 15px;
+  background-image: url('http://www.appsvillage.mobi/images/twitter_logo_button.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-item.facebook {
+  padding-bottom: 15px;
+  height: 34px;
+  width: 34px;
+  margin-top: 24px;
+  background-image: url('http://www.appsvillage.mobi/images/facebook_logo_button.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-item {
+  position: relative;
+  display: block;
+  overflow: visible;
+  height: 50px;
+  margin-top: 17px;
+  margin-left: 26px;
+  padding: 7px 15px 7px 16px;
+  float: right;
+  border-style: none;
+  text-decoration: none;
+}
+
+#page_list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+  #page_list a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }

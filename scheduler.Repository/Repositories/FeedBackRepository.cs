@@ -15,18 +15,31 @@ namespace scheduler.Repository.Repositories
             _pubContext = pubContext;
 
         }
-        public int AddFirstNotification(string key,string secKey)
+        public int AddFirstNotification(string key, string secKey)
         {
-            try { 
-            FeedBack obje = new FeedBack();
-            obje.ResponseKey = key;
+            try
+            {
+                FeedBack obje = new FeedBack();
+                obje.ResponseKey = key;
                 obje.ResponseSecKey = secKey;
-                return _pubContext.AddFirstCall(key,secKey).Item1;
-               // return true;
+                return _pubContext.AddFirstCall(key, secKey).Item1;
+                // return true;
             }
             catch
             {
                 return -1;
+            }
+        }
+
+        public bool Unsubscribe(string key)
+        {
+            try
+            {
+                return _pubContext.Unsubscribe(key).Item1;
+            }
+            catch
+            {
+                return false;
             }
         }
 
@@ -35,8 +48,6 @@ namespace scheduler.Repository.Repositories
             try
             {
                 _pubContext.AddFeedback(objFeedBack);
-
-
                 return true;
             }
             catch

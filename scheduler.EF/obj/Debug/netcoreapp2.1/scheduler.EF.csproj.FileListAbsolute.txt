@@ -48,7 +48,6 @@ D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Debug\netcoreapp2.1\scheduler.EF.p
 D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Debug\netcoreapp2.1\scheduler.Model.dll
 D:\URing\RepoAngulerSchduler\scheduler.EF\bin\Debug\netcoreapp2.1\scheduler.Model.pdb
 D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Debug\netcoreapp2.1\scheduler.EF.csprojAssemblyReference.cache
-D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Debug\netcoreapp2.1\scheduler.EF.csproj.CoreCompileInputs.cache
 D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Debug\netcoreapp2.1\scheduler.EF.AssemblyInfoInputs.cache
 D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Debug\netcoreapp2.1\scheduler.EF.AssemblyInfo.cs
 D:\URing\RepoAngulerSchduler\scheduler.EF\obj\Debug\netcoreapp2.1\scheduler.EF.csproj.CopyComplete

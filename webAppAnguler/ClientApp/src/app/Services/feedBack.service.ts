@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user'; 
+import { User } from '../models/user';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
 import { HttpDataService } from './http-data.service';
@@ -15,23 +15,28 @@ export class feedBackService {
 
 
 
-  constructor(private httpdataservice: HttpDataService, private router: Router) {
+    constructor(private httpdataservice: HttpDataService, private router: Router) {
 
-    
-  }
 
- 
-  AddfirstRequest(key,seckey) {
-  
-    // return <Observable<ResponseModel>>this.httpdataservice.GetData("feedback/AddResponse?emailid=", email, null);
-    return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/AddResponse?key=" + key + "&secKey=" + seckey);
-     
-  }
- 
- 
+    }
 
-  AddFeedback(data) {
-    return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback",data)
-  }
+
+    AddfirstRequest(key, seckey) {
+
+      
+        return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/AddResponse?key=" + key + "&secKey=" + seckey);
+
+    }
+    Unsubscribe(key) {
+
+       
+        return <Observable<ResponseModel>>this.httpdataservice.GetData("/Feedback/Unsubscribe?key=" + key);
+
+    }
+
+
+    AddFeedback(data) {
+        return <Observable<ResponseModel>>this.httpdataservice.PostData("/Feedback/AddFeedback", data)
+    }
 
 }
