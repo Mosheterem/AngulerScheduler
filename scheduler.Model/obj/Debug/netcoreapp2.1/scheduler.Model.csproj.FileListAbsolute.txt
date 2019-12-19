@@ -33,3 +33,4 @@ D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.M
 D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.AssemblyInfo.cs
 D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.dll
 D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.pdb
+D:\URing\RepoAngulerSchduler\scheduler.Model\obj\Debug\netcoreapp2.1\scheduler.Model.csproj.CoreCompileInputs.cache

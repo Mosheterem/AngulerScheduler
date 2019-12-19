@@ -22,7 +22,7 @@ export class UnsubscribeComponent implements OnInit {
 
         this._feedBackService.Unsubscribe(this.ID).subscribe(resp => {
             if (resp.status == Status.Success) {
-                this.alert.ShowSuccessAlert('ביטול המנוי בהצלחה');
+              this.alert.ShowSuccessAlert('הודעתך נרשמה בהצלחה');
             }
             else {
                 this.alert.ShowErrorAlert(resp.message);

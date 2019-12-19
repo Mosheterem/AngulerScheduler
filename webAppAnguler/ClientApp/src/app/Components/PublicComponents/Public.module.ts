@@ -10,15 +10,17 @@ import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
 import { ResetPasswordComponent } from './ResetPassword/reset-password/reset-password.component';
 import { ThankyouComponent } from './Feedback/thankyou/thankyou.component';
 import { UnsubscribeComponent } from './unsubscribe/unsubscribe.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
-//ThankyouComponent
+//ThankyouComponentNotfoundComponent
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'forgotpassword', component: ForgotpasswordComponent },
     { path: 'thankyou', component: ThankyouComponent },
     { path: 'unsubscribe', component: UnsubscribeComponent },
-    { path: 'resetPassword/:email', component: ResetPasswordComponent }
+  { path: 'resetPassword/:email', component: ResetPasswordComponent },
+    { path: '**', component: NotfoundComponent }
 ]
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Routes = [
         ForgotpasswordComponent,
         ResetPasswordComponent,
         ThankyouComponent,
-        UnsubscribeComponent
+    UnsubscribeComponent,
+    NotfoundComponent
     ],
     imports: [
         CommonModule,
