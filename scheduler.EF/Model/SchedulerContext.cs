@@ -502,7 +502,7 @@ namespace scheduler.EF.Model
 
         private string GetConnectionString(string ConnectionString, string clinetId)
         {
-            string strConnectionStringFix = @"Server=tcp:23.97.186.48\\mssqlserver,50841;Database=CALT" + clinetId + "; User ID=sa; Password=r4199357!;MultipleActiveResultSets=true";
+            string strConnectionStringFix = @"Server=tcp:192.168.1.3\\mssqlserver,50841;Database=CALT" + clinetId + "; User ID=sa; Password=r4199357!;MultipleActiveResultSets=true";
             return String.IsNullOrEmpty(ConnectionString) == true ? strConnectionStringFix : ConnectionString;
         }
     }

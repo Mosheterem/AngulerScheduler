@@ -43,8 +43,8 @@ const routes: Routes = [
     AppointmentReportComponent,
     AppintmnentsComponent,
     GroupByPipe,
-    OrderByPipe,
-    AddAppointmentComponent,
+    OrderByPipe, BmaComponent,
+    AddAppointmentComponent, 
     //BmaComponent, MainComponent
     //AppointmentReportComponent
   ],

@@ -54,6 +54,7 @@ export class ThankyouComponent implements OnInit {
     }
 
     this.registerForm.controls['id'].setValue(this.returnvalue);
+    debugger
     this._feedBackService.AddFeedback(this.registerForm.value).subscribe(resp => {
       if (resp.status == Status.Success) {
         this.alert.ShowSuccessAlert("תודה! אנו ניצור איתך קשר בקרוב");

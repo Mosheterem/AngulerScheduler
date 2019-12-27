@@ -244,7 +244,7 @@ export class AppointmentReportComponent implements OnInit {
    // let data = JSON.stringify(payload);
 
     this.appService.GetAppintmentByDate(payload).subscribe(resp => {
-      debugger
+      
       this.Appointments = resp;
       this.FilterReportForuser()
       

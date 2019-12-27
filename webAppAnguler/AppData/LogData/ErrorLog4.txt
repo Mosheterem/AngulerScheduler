@@ -1,7 +1,10 @@
 
-Log Entry : 17:13:58 יום רביעי 06 נובמבר 2019
+Log Entry : 13:01:23 יום רביעי 25 דצמבר 2019
   :
-  :Unable to resolve service for type 'scheduler.service.IService.IFeedBackService' while attempting to activate 'webAppAnguler.Controllers.FeedBackController'.
+  :The parameter 'address' cannot be an empty string.
+Parameter name: address
+-------------------------------
+e 'webAppAnguler.Controllers.FeedBackController'.
 -------------------------------
 
 -------------------------------

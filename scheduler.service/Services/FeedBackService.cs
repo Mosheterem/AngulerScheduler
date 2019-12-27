@@ -1,5 +1,6 @@
 ﻿using scheduler.Model.ViewModel;
 using scheduler.Repository.IRepositories;
+using scheduler.service.Common_Utilities;
 using scheduler.service.IService;
 using System;
 
@@ -23,7 +24,8 @@ namespace scheduler.service.Services
                 var usre = _feedBackService.UpdateMoreInfomation(feedBack);
                 if (usre)
                 {
-
+                    string EmailInfor = "<table><tr><td>Clinet</td><td>" + feedBack.FullName + "</td>,</tr><tr><td> his email</td><td>" + feedBack.Email + "</td> <td>Note</td><td>" + feedBack.Note + "</td></tr></table>";
+                    Utilities.SendEmail("support@mtlp.co.il", "Report" + DateTime.Now.ToShortDateString(), EmailInfor);
                     response.data = usre;
                     response.status = Status.Success;
                 }
@@ -89,7 +91,7 @@ namespace scheduler.service.Services
                 var data = _feedBackService.Unsubscribe(key);
                 if (data)
                 {
-
+                    Utilities.SendEmail("support@mtlp.co.il", "Report" + DateTime.Now.ToShortDateString(),"user with key unsubscribe the email notification="+key);
                     response.data = data;
                     response.status = Status.Success;
                 }
